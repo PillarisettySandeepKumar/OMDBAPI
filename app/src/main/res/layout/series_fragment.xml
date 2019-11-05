@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/seriesParentll"
+        tools:context=".fragments.MovieFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+    >
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/titleSeriesSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:background="@drawable/rect_edit_text_border"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:hint="Search Title"
+                android:padding="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_titleSearch"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/ic_search"
+        />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:id="@+id/series_card_view"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardElevation="6dp"
+            card_view:cardMaxElevation="10dp"
+            app:cardUseCompatPadding="true"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+        >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/posterImg"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="4dp"
+                    android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:textStyle="bold"
+                        android:gravity="left"
+                        android:textSize="14sp"
+                        android:text="@string/movieName"
+                />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/seriesNameValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:textSize="14sp"
+                        android:gravity="start"
+                />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:textSize="14sp"
+                        android:text="@string/year"
+                />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/releaseYearValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:textSize="14sp"
+                        android:gravity="start"
+                />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="4dp"
+
+                    android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:textSize="14sp"
+                        android:text="@string/banner"
+                />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bannerValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:textSize="14sp"
+                        android:gravity="start"
+                />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
